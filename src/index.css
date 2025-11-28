@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-gradient-start: #0f0f12;
+  --bg-gradient-end: #1a1a22;
+}
+
+body {
+  @apply bg-ink-950 text-ink-100 antialiased;
+  background: linear-gradient(145deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ink-900/50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ink-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ink-600;
+}
+
+/* Smooth animations */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Glass morphism utility */
+.glass {
+  @apply bg-ink-900/40 backdrop-blur-xl border border-ink-800/50;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply hover:bg-ink-800/30 hover:border-ink-700/50 transition-all duration-300;
+}
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.3s; }
+.stagger-7 { animation-delay: 0.35s; }
+.stagger-8 { animation-delay: 0.4s; }
+
